@@ -2,8 +2,51 @@
 @import 'bootswatch';
 @import 'bootstrap';
 $blue: red;
+$carousel-height: 40rem;
+$card-img-ht: 40vh;
+$card-img-wd: 40vw;
 
-.card-img-top{
-  width:100%;
-  height:auto;
+@mixin text-alignment($text-property) {
+		text-align: $text-property;
 }
+
+@mixin feat-img-size($height-size, $width-size) {
+	height: $height-size;
+	width: $width-size;
+}
+
+.carousel-item {
+	img {
+	height: $carousel-height;
+	}
+}
+
+.jumbotron {
+	@include text-alignment(center);
+}
+
+.subheading {
+	h2 {
+
+	@include text-alignment(center);
+	}
+}
+
+.card-img-top {
+  width:100%;
+}
+
+.card {
+	.img-fluid {
+	align-item: center;
+	height: $card-img-ht;
+	
+	}
+}
+
+.featurette-image {
+	@include feat-img-size(30vh,30rem);
+}
+
+
+
